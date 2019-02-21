@@ -121,4 +121,10 @@ class PacienteControlador extends Controller
         }
         return redirect('/pacientes');
     }
+
+    public function pacientesJson()
+    {
+        $pacientes = Paciente::all();
+        return json_encode($pacientes);
+    }
 }

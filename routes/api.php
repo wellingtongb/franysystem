@@ -18,5 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 //lista pacientes
-Route::get('/pacientes', 'ControladorCategoria@pacientesJson');
+Route::get('/pacientes', 'PacienteControlador@pacientesJson');
 

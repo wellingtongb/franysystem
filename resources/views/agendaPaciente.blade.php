@@ -17,13 +17,15 @@
                         <div class="input-group col-md-8">
                             <label for="busca_paciente">Busca Paciente</label>
                             <div class="input-group">
-                                <input type="text" name="busca_paciente" class="form-control" placeholder="Busca paciente...">
+                                <select class="form-control" id="busca_paciente">
+                                    <option selected disabled></option>
+                                </select>
                                 <div class="input-group-append">
                                     <button class="btn btn-secondary" type="button">
                                         <i class="fa fa-search"></i>
                                     </button>
                                 </div>
-                            </div>
+                            </div>                          
                         </div>
                         <div class="input-group col-md-4">
                             <label for="tipo_atendimento">Tipo atendimento</label>
@@ -87,3 +89,29 @@
     </div>    
 </main>
 @endsection
+
+@section('javascript')
+    <script>
+         function carregaPacientes() {
+            $.getJSON('/api/pacientes', function(data){
+                for(i=0; i< data.length; i++){
+                    opcao = '<option value ="' + data[i].id + '">' +
+                        data[i].nome + '</option>';
+                    $('#busca_paciente').append(opcao);
+                }                
+            });
+        }
+        $(function (){
+            carregaPacientes();
+        });
+    </script>
+@endsection
+
+<!-- <div class="input-group">
+    <input type="text" name="busca_paciente" class="form-control" placeholder="Busca paciente...">
+    <div class="input-group-append">
+        <button class="btn btn-secondary" type="button">
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
+</div> -->
