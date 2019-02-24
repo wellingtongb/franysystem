@@ -27,9 +27,12 @@
                                 </div>
                             </div>                          
                         </div>
-                        <div class="input-group col-md-4">
-                            <label for="tipo_atendimento">Tipo atendimento</label>
-                            <input type="text" name="tipo_atendimento" id="tipo_atendimento"/>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                               <label for="tipo_atendimento">Tipo atendimento</label>
+                                <input type="text" class="form-control" name="tipo_atendimento" id="tipo_atendimento"/>
+                            </div>
+                            
                         </div>
                     </div> 
                     <div class="row">

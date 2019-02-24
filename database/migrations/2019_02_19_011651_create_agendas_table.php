@@ -19,8 +19,9 @@ class CreateAgendasTable extends Migration
             $table->time('hora_inicio');
             $table->time('hora_fim')->nullable($value = true);
             $table->boolean('finalizado');
-            $table->string('tipo_atendimento', 150)->nullable($value = true)();
-            $table->foreign('paciente_id')->references('id')->on('pacientes');
+            $table->string('tipo_atendimento', 150)->nullable();
+            $table->integer('paciente_id')->unsigned();
+            $table->foreign('paciente_id')->references('id')->on('pacientes')->onDelete('cascade');
             $table->timestamps();
         });
     }

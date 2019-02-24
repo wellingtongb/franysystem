@@ -8,9 +8,14 @@
             <div class="container col-md-12">
                 <div class="card border">
                     <div class="card-header dark">
-                        <div class="card-title">
-                            Listagem de Clientes
-                        </div>
+                        <div class="row">
+                            <div class="card-title">
+                                Listagem de Clientes
+                            </div>
+                            <div text-align="right">
+                                <a href="/paciente/novo" class="btn btn-primary btn-sm"><i class="fas fa-user-plus"></i></a>
+                            </div>
+                        </div>                                          
                     </div>
                     <div class="card-body">
                     @if(count($cats) > 0)
@@ -33,19 +38,16 @@
                                     <td>{{ $cat->endereco }}</td>
                                     <td>{{ $cat->telefone }}</td>
                                     <td>{{ $cat->email }}</td>
-                                    <td>
-                                        <a href="/paciente/edita/{{$cat->id}}" class="btn btn-sm btn-primary">Editar</a>
-                                        <a href="/paciente/remove/{{$cat->id}}" class="btn btn-sm btn-danger">Remover</a>
-                                        <a href="/paciente/agenda/{{$cat->id}}" class="btn btn-sm btn-success">Agendar</a>
+                                    <td style="width: 16.66%" align="center">
+                                        <a href="/paciente/edita/{{$cat->id}}" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
+                                        <a href="/paciente/remove/{{$cat->id}}" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                        <a href="/paciente/agenda/{{$cat->id}}" class="btn btn-sm btn-success"><i class="fas fa-calendar-alt"></i></a>
                                     </td>
                                 </tr>
                             @endforeach
                             </tbody>
                         </table>
                         @endif
-                    </div>
-                    <div class="card-footer text-right">   
-                        <a href="/paciente/novo" class="btn btn-primary btn-sm ">Novo</a>
                     </div>
                 </div>
             </div>
