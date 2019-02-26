@@ -91,13 +91,13 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" href="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Agenda</a>
+                                <a class="nav-link" href="/agenda">Agenda</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Pacientes</a>
+                                <a class="nav-link" href="/pacientes">Pacientes</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Relatórios</a>

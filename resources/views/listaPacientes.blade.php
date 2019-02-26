@@ -12,8 +12,8 @@
                             <div class="card-title">
                                 Listagem de Clientes
                             </div>
-                            <div text-align="right">
-                                <a href="/paciente/novo" class="btn btn-primary btn-sm"><i class="fas fa-user-plus"></i></a>
+                            <div style="margin-left:auto">
+                                <a href="/paciente/novo" class="btn btn-primary btn-sm"><i class="fas fa-user-plus"></i>    Novo Paciente</a>
                             </div>
                         </div>                                          
                     </div>

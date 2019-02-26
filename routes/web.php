@@ -38,3 +38,4 @@ Route::get('/paciente/agendar', function(){
 });
 Route::get('/agenda', 'AgendaControlador@index');
 Route::get('/agenda/novo', 'AgendaControlador@create');
+Route::post('/agendamento', 'AgendaControlador@store');
